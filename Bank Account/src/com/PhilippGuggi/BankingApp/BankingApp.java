@@ -99,7 +99,8 @@ class BankAccount {
 				System.out.println("Invalid Option. Please enter again.");
 			}
 		} while(option != 'E');
-		System.out.println("Thank you for using our services");
+		System.out.println("Thank you for using our services!");
+		scanner.close();
 	}
 }
 
