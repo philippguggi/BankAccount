@@ -64,6 +64,20 @@ class BankAccount {
 				System.out.println("Balance = " + balance);
 				System.out.println("---------------");
 				System.out.println("\n");
+				break;
+				
+			case 'B':
+				System.out.println("---------------");
+				System.out.println("Enter an amount to deposit:");
+				System.out.println("----------------");
+				int amount = scanner.nextInt();
+				deposit(amount);
+				System.out.println("\n");
+				break;
+				
+			case 'C':
+				
+			
 			}
 		}
 	}
