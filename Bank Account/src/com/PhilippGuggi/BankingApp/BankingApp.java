@@ -45,11 +45,11 @@ class BankAccount {
 		System.out.println("Welcome " + customerName);
 		System.out.println("Your ID is: " + customerId);
 		System.out.println("\n");
-		System.out.println("Check Balance");
-		System.out.println("Deposit");
-		System.out.println("Withdraw");
-		System.out.println("Previous Transaction");
-		System.out.println("Exit");
+		System.out.println("A. Check Balance");
+		System.out.println("B. Deposit");
+		System.out.println("C. Withdraw");
+		System.out.println("D. Previous Transaction");
+		System.out.println("E. Exit");
 		
 		do {
 			System.out.println("====================");
@@ -76,15 +76,36 @@ class BankAccount {
 				break;
 				
 			case 'C':
+				System.out.println("---------------");
+				System.out.println("Enter an amount to withdraw:");
+				System.out.println("----------------");
+				int amount2 = scanner.nextInt();
+				withdraw(amount2);
+				System.out.println("\n");
+				break;
 				
-			
+			case 'D':
+				System.out.println("---------------");
+				getPreviousTransaction();
+				System.out.println("---------------");
+				System.out.println("\n");
+				break;
+				
+			case 'E':
+				System.out.println("---------------");
+				break;
+				
+			default:
+				System.out.println("Invalid Option. Please enter again.");
 			}
-		}
+		} while(option != 'E');
+		System.out.println("Thank you for using our services");
 	}
 }
 
 public class BankingApp {
 	public static void main(String[] args) {
-		
+		BankAccount acc1 = new BankAccount ("Max Mustermann", "000001");
+		acc1.showMenu();
 	}
 }
