@@ -56,9 +56,10 @@ class BankAccount {
 			System.out.println("Enter an option:");
 			System.out.println("====================");
 			option = scanner.next().charAt(0);
+			char optionUpper = Character.toUpperCase(option);
 			System.out.println("\n");
 			
-			switch(option) {
+			switch(optionUpper) {
 			case 'A':
 				System.out.println("---------------");
 				System.out.println("Balance = " + balance);
